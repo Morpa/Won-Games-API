@@ -48,7 +48,7 @@ const colors = {
     blue: "#0a0d27",
     blueDark: "#06081b",
     pink: "#f231a5",
-    pink: "#f56161",
+    orange: "#f56161",
   },
 };
 
