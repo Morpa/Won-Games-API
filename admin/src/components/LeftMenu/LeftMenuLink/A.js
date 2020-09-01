@@ -1,39 +1,41 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const A = styled.a`
-  position: relative;
-  padding-top: 0.7rem;
-  padding-bottom: 0.2rem;
-  padding-left: 1.6rem;
-  min-height: 3.6rem;
-  border-left: 0.3rem solid transparent;
-  cursor: pointer;
-  color: ${(props) => props.theme.main.colors.leftMenu["link-color"]};
-  text-decoration: none;
-  display: block;
-  -webkit-font-smoothing: antialiased;
-
-  &:hover {
-    color: ${(props) => props.theme.main.colors.white};
-    background: ${(props) => props.theme.main.colors.won.blue};
-
-    border-left: 0.3rem solid ${(props) => props.theme.main.colors.won.orange};
+  ${({ theme }) => css`
+    position: relative;
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1.6rem;
+    min-height: 3.6rem;
+    border-left: 0.3rem solid transparent;
+    cursor: pointer;
+    color: ${theme.main.colors.leftMenu["link-color"]};
     text-decoration: none;
-  }
+    display: block;
+    -webkit-font-smoothing: antialiased;
 
-  &:focus {
-    color: ${(props) => props.theme.main.colors.white};
-    text-decoration: none;
-  }
+    &:hover {
+      color: ${theme.main.colors.white};
+      background: ${theme.main.colors.won.blue};
 
-  &:visited {
-    color: ${(props) => props.theme.main.colors.leftMenu["link-color"]};
-  }
+      border-left: 0.3rem solid ${theme.main.colors.won.orange};
+      text-decoration: none;
+    }
 
-  &.linkActive {
-    color: white !important;
-    border-left: 0.3rem solid ${(props) => props.theme.main.colors.won.orange};
-  }
+    &:focus {
+      color: ${theme.main.colors.white};
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: ${theme.main.colors.leftMenu["link-color"]};
+    }
+
+    &.linkActive {
+      color: white !important;
+      border-left: 0.3rem solid ${theme.main.colors.won.orange};
+    }
+  `}
 `;
 
 export default A;
