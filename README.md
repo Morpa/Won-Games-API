@@ -7,8 +7,6 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Morpa/Won-Games-API?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/Morpa/Won-Games-API?color=56BEB8">
-
 </p>
 
 <h4 align="center">
