@@ -48,7 +48,7 @@
         "pegi18"
       ],
       "required": true,
-      "unique": true
+      "unique": false
     },
     "cover": {
       "model": "file",
