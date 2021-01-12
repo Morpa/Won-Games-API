@@ -20,8 +20,8 @@
       "required": true
     },
     "games": {
-      "via": "developers",
-      "collection": "game"
+      "collection": "game",
+      "via": "developers"
     }
   }
 }
