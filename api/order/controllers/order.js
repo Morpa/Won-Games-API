@@ -15,13 +15,20 @@ module.exports = {
       cart?.map(async (game) => {
         const validateGame = await strapi.services.game.findOne({
           id: game.id
-        })
+        });
   
         if (validateGame) {
           games.push(validateGame);
         }
       })
     );
+
+    if (!games.length) {
+      ctx.response.status = 404;
+      return {
+        error: "No valid games found!"
+      };
+    }
 
     return games;
   }
