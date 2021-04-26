@@ -1,26 +1,26 @@
-const cartGamesId = async (cart) => {
+const cartGamesIds = async (cart) => {
   return await cart.map((game) => ({
-    id: game.id
-  }))
-}
+    id: game.id,
+  }));
+};
 
 const cartItems = async (cart) => {
   let games = [];
 
   await Promise.all(
     cart?.map(async (game) => {
-      const validateGame = await strapi.services.game.findOne({
-        id: game.id
+      const validatedGame = await strapi.services.game.findOne({
+        id: game.id,
       });
 
-      if (validateGame) {
-        games.push(validateGame);
+      if (validatedGame) {
+        games.push(validatedGame);
       }
     })
   );
 
-  return games
-}
+  return games;
+};
 
 const total = async (games) => {
   const amount = await games.reduce((acc, game) => {
@@ -28,10 +28,10 @@ const total = async (games) => {
   }, 0);
 
   return Number((amount * 100).toFixed(0));
-}
+};
 
 module.exports = {
+  cartGamesIds,
   cartItems,
   total,
-  cartGamesId
-}
+};
