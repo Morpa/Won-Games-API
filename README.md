@@ -9,10 +9,6 @@
 
 </p>
 
-<h4 align="center">
-	🚧  Api 🚀 Under construction...  🚧
-</h4>
-
 <hr>
 
 # React Avançado - Won Games API
@@ -52,7 +48,7 @@ This project uses a `/games/populate` route in order to populate the data via Go
 In order to make it work, follow the steps:
 
 - Go to Roles & Permissions > Public and make sure `game:populate` route is public available and the upload as well
-- With Strapi running run the following comand in your console:
+- With Strapi running run the following command in your console:
 
 ```bash
 $ curl -X POST http://localhost:1337/games/populate
